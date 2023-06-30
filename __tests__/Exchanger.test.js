@@ -14,10 +14,11 @@ describe("Exchanger", () => {
 
     test("should return conversion rate and result", () => {
         const target = 'GBP';
+        const amount = 52;
         const response = {
             "conversion_rate": 0.8623,
             "conversion_result": 44.7396
         };
-        expect(getData(target, response)).toBe('The exchange rate for USD to GBP is 1 : 0.86. 52 USD is 44.74 GBP.')
+        expect(getData(target, amount, response)).toBe('The exchange rate is 1 USD to 0.86 GBP. 52 USD is 44.74 GBP.')
     })
 });
