@@ -21,7 +21,7 @@ module.exports = {
             verbose: true // optional
         }),
         new HtmlWebpackPlugin({
-            title: 'node',
+            title: 'currency-exchanger',
             template: './src/index.html',
             inject: 'body'
         }),
