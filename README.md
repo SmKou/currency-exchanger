@@ -41,6 +41,11 @@ The git pull command is only if necessary, such as choosing to add a README or L
 
 Optionally, you can remove .DS_Store from .gitignore, if you are not using a Mac.
 
+Run:
+```bash
+npm install
+```
+
 ### **Project Setup**
 
 The api key used in code with ```process.env.API_KEY``` comes from a .env file in the root folder. This file is mentioned in .gitignore to keep the api key private and local. If you do not have a .env file, create one, add it to the .gitignore, then commit both .gitignore and .env before proceeding.

@@ -2,7 +2,7 @@ import { getExchange, makeApiCall, getData, getError } from '../src/js/bs/Exchan
 
 /* Refer testing_guide.md */
 
-describe("Exchanger", () => {
+describe("getError", () => {
     test("should return error message", () => {
         const target = 'GP';
         const response = {
