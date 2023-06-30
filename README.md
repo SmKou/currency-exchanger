@@ -108,6 +108,8 @@ git subtree push --prefix dist origin gh-pages
 
 Please report any issues in using this app.
 
+- Form layout inconsistency
+
 ## **License**
 
 [MIT](https://choosealicense.com/licenses/mit/)
