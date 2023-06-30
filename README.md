@@ -23,6 +23,12 @@ View on [Github Pages](https://smkou.github.io/currency-exchanger/)
 
 Currency Exchanger is a web app that takes an amount of USD and one of five currencies to convert to. With the submitted data, the app makes an api call to get the most recent exchange rate. If the request receives a response, the result is shown to the user, otherwise an error is displayed, stating the currency does not exist.
 
+### **Under Consideration**
+
+- Load More Currencies: Populate select elem with all available currency types
+- Convert currency to and from other currencies
+- Cache API results
+
 ## **Complete Setup**
 
 - Navigate to main page of repo
@@ -60,19 +66,7 @@ To create the production ready code for your project, use the command ```npm run
 
 To build and preview your project, use either ```npm run start``` or ```npm start``` in the terminal.
 
-To type in typescript:
-- name files with .ts instead of .js
-- run ```npx tsc <filename>.ts``` or ```npm run tsc``` to compile to javascript
-
-**Warning**: Typescript feature has not been tested in use. I anticipate conflicts with the build command, but am not sure.
-
-**Warning**: Unless there's at least one .ts file in your src folder, the tsconfig.json will output a problem, namely that there are no inputs. If you don't end up using TypeScript, remove Component.ts in src/js/bs/ and the tsconfig.json in root.
-
 ## **Rendering**
-
-Before publishing your website, app, or api, change the rule, "no-console": "off", in .eslintrc to "no-console": "warn" and run ```npm run lint```
-
-Also, remove any unused files or folders that came with this template.
 
 **Github Pages**
 
@@ -112,7 +106,7 @@ git subtree push --prefix dist origin gh-pages
 
 ## **Known Bugs**
 
-Please report any issues in using this template.
+Please report any issues in using this app.
 
 ## **License**
 

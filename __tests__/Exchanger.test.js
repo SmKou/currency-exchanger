@@ -19,6 +19,6 @@ describe("Exchanger", () => {
             "conversion_rate": 0.8623,
             "conversion_result": 44.7396
         };
-        expect(Exchanger.getData(target, amount, response)).toBe('The exchange rate is 1 USD to 0.86 GBP\n52 USD is 44.74 GBP')
+        expect(Exchanger.getData(target, amount, response)).toBe('The exchange rate is 1 USD to 0.86 GBP, and 52 USD is 44.74 GBP.')
     });
 });

@@ -12,7 +12,7 @@ export default class Exchanger {
     }
 
     static getData(target, amount, response) {
-        return `The exchange rate is 1 USD to ${response["conversion_rate"].toFixed(2)} ${target}\n${amount} USD is ${response["conversion_result"].toFixed(2)} ${target}`;
+        return `The exchange rate is 1 USD to ${response["conversion_rate"].toFixed(2)} ${target}, and ${amount} USD is ${response["conversion_result"].toFixed(2)} ${target}.`;
     }
 
     static getError(target, response) {
