@@ -1,36 +1,42 @@
 import Exchanger from './js/bs/Exchanger';
+import { setDefault, setOptions, get } from './js/ui/Form';
 
 import './css/fonts.css';
 import './css/styles.css';
 
 const input = {
     amount: () => {
-        const amount = document.querySelector('#amount').value;
-        return (!amount) ? 1 : amount;
+        const input = document.querySelector('#amount');
+        return get(input, 1);
+    },
+    base: () => {
+        const input = document.querySelector('#convert-fr');
+        return get(input, 'USD');
     },
     target: () => {
-        return document.querySelector('#currency').value;
-    }
+        const input = document.querySelector('#convert-into');
+        return get(input, 'EUR');
+    },
+    first_entry: false
 };
 
-const submit = document.querySelector('#submit-btn');
+const base_currency = document.querySelector('#convert-fr');
+const target_currency = document.querySelector('#convert-into');
+
+setDefault(base_currency, 'base');
+setDefault(target_currency, 'target');
+
+(async () => {
+    const result = await Exchanger.getCurrency();
+    setOptions(base_currency, result);
+    setOptions(target_currency, result);
+})();
+
+const submit = document.querySelector('[type=submit]');
 submit.addEventListener('click', async e => {
     e.preventDefault();
     const output = document.querySelector('.output');
-    const { target, amount } = input;
-    const result = await Exchanger.getExchange(target(), amount());
+    const { amount, base, target } = input;
+    const result = await Exchanger.getExchange(base(), target(), amount());
     output.innerHTML = result;
 });
-
-
-/* TEST: Exchanger.getExchange() */
-// (async () => {
-//     const result = await Exchanger.getExchange('GBP');
-//     console.log(result);
-// })();
-
-/* TEST: Exchanger.getCurrency() */
-// (async () => {
-//     const result = await Exchanger.getCurrency();
-//     console.log(result);
-// })();

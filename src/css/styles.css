@@ -19,11 +19,14 @@
     scroll-behavior: smooth;
 }
 
-*::-webkit-scrollbar { 
+*::-webkit-scrollbar {
     display: none;
 }
 
-/* skeleton */ html { font-size: 62.5% }
+/* skeleton */
+html {
+    font-size: 62.5%
+}
 
 body {
     position: relative;
@@ -39,18 +42,27 @@ body {
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 h1 {
-  margin: 0;
-  margin-bottom: 2rem;
-  font-family: 'League Spartan';
-  font-weight: 300;
+    margin: 0;
+    margin-bottom: 2rem;
+    font-family: 'League Spartan';
+    font-weight: 300;
 }
-h1 { font-size: 3.0rem; line-height: 1.2; letter-spacing: -.1rem; }
+
+h1 {
+    font-size: 3.0rem;
+    line-height: 1.2;
+    letter-spacing: -.1rem;
+}
 
 @media (min-width: 550px) {
-    h1 { font-size: 4.0rem }
+    h1 {
+        font-size: 4.0rem
+    }
 }
 
-p { margin: 0 }
+p {
+    margin: 0
+}
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -58,7 +70,10 @@ a {
     color: #1EAEDB;
     text-decoration: none;
 }
-a:hover { color: #0FA0CE }
+
+a:hover {
+    color: #0FA0CE
+}
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -67,22 +82,22 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  display: inline-block;
-  height: 3.8rem;
-  padding: 0 30px;
-  color: #888;
-  text-align: center;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 3.8rem;
-  letter-spacing: .1rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  white-space: nowrap;
-  background-color: transparent;
-  border-radius: 4px;
-  border: 1px solid #BBB;
-  cursor: pointer;
+    display: inline-block;
+    height: 3.8rem;
+    padding: 0 30px;
+    color: #888;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 3.8rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #BBB;
+    cursor: pointer;
 }
 
 .button:hover,
@@ -95,9 +110,9 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-  color: #333;
-  border-color: #888;
-  outline: 0;
+    color: #333;
+    border-color: #888;
+    outline: 0;
 }
 
 .button.button-primary,
@@ -105,9 +120,9 @@ button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
-  color: #FFF;
-  background-color: #33C3F0;
-  border-color: #33C3F0;
+    color: #FFF;
+    background-color: #33C3F0;
+    border-color: #33C3F0;
 }
 
 .button.button-primary:hover,
@@ -120,22 +135,22 @@ button.button-primary:focus,
 input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
-  color: #FFF;
-  background-color: #1EAEDB;
-  border-color: #1EAEDB;
+    color: #FFF;
+    background-color: #1EAEDB;
+    border-color: #1EAEDB;
 }
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 label {
-  display: block;
-  margin-bottom: .5rem;
-  font-weight: 600;
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 600;
 }
 
 fieldset {
-  padding: 1.2rem;
-  border: 1px solid #888;
+    padding: 1.2rem;
+    border: 1px solid #888;
 }
 
 legend {
@@ -152,24 +167,32 @@ legend.lgt {
 
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-ul, ol, dl {
+ul,
+ol,
+dl {
     margin: 0;
     padding: 0;
 }
 
-ul { list-style: circle }
+ul {
+    list-style: circle
+}
 
 ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin: 1.5rem 0 1.5rem 3rem;
-  font-size: 90%;
+    margin: 1.5rem 0 1.5rem 3rem;
+    font-size: 90%;
 }
 
-li { margin-bottom: 1.0rem }
+li {
+    margin-bottom: 1.0rem
+}
 
-dt { font-weight: bold }
+dt {
+    font-weight: bold
+}
 
 dd {
     margin-left: 1.2rem;
@@ -191,12 +214,16 @@ code {
     font-family: 'Ra Mono';
 }
 
-pre, code { background: #CCC }
+pre,
+code {
+    background: #CCC
+}
 
 /* Template sections
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-/* skeleton: container */ main {
+/* skeleton: container */
+main {
     width: 100%;
     min-height: 100vh;
     margin: 0 auto;
@@ -206,52 +233,53 @@ pre, code { background: #CCC }
 }
 
 .container {
-  padding: 2rem;
-  background-color: #e6e6fa;
-  box-shadow:
-    12px 12px 16px 0 rgba(0, 0, 0, 0.25),
-    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
-  border-radius: 20px;
+    padding: 2rem;
+    background-color: #e6e6fa;
+    box-shadow:
+        12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+        -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
 }
 
 form {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 h1 {
-  text-align: center;
+    text-align: center;
 }
 
-form label {
-  width: 300px;
-  margin: 1.2rem;
+.input {
+    width: 240px;
 }
 
 form input[type=number],
 form select {
-  outline: 0;
-  border: 0;
-  font-family: 'Nunito Sans';
+    width: 200px;
+    outline: 0;
+    border: 0;
+    font-family: 'Nunito Sans';
 }
 
 form input[type=number] {
-  width: 120px;
-  padding-left: 6px;
-  border-radius: 6px;
+    width: 120px;
+    padding-left: 6px;
+    border-radius: 6px;
 }
 
 .output {
-  width: 98%;
-  min-height: 5rem;
-  margin: 1.2rem 0;
-  padding: 1.2rem;
-  border: 1px solid black;
-  border-radius: 1.2rem;
-  color: #888;
-  border-color: #888;
+    width: 98%;
+    min-height: 5rem;
+    margin: 1.2rem 0;
+    padding: 1.2rem;
+    border: 1px solid black;
+    border-radius: 1.2rem;
+    color: #888;
+    border-color: #888;
 }
 
 /* Messages and Notices

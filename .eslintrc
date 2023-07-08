@@ -10,7 +10,8 @@
         "node": true
     },
     "rules": {
-        "semi": 1,
+        "semi": "off",
+        "no-unused-vars": "off",
         "indent": [ "warn", 4 ]
     }
 }

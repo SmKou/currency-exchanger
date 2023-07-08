@@ -1,6 +1,6 @@
 export default class Exchanger {
-    static async getExchange(target, amount = 1) {
-        const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/USD/${target}/${amount}`;
+    static async getExchange(base = 'USD', target = 'EUR', amount = 1) {
+        const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/${base}/${target}/${amount}`;
         const response = await fetch(url)
             .catch(error => this.getError(error, {
                 status: 418,
@@ -15,14 +15,14 @@ export default class Exchanger {
     }
 
     static async getCurrency() {
-        const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`;
+        const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/codes`;
         const response = await fetch(url)
             .catch(error => this.getError(error, {
                 status: 418,
                 statusText: 'Failed to fetch'
             }));
         if (!response.ok)
-            return this.getError('getting currency', response);
+            return this.getError('getting currency codes', response);
         else {
             const result = await response.json();
             return this.getRates(result);
@@ -30,7 +30,7 @@ export default class Exchanger {
     }
 
     static getRates(response) {
-        return Object.keys(response["conversion_rates"]);
+        return response["supported_codes"];
     }
 
     static getData(target, amount, response) {
