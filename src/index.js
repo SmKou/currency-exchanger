@@ -21,3 +21,16 @@ submit.addEventListener('click', async e => {
     const result = await Exchanger.getExchange(target(), amount());
     output.innerHTML = result;
 });
+
+
+/* TEST: Exchanger.getExchange() */
+// (async () => {
+//     const result = await Exchanger.getExchange('GBP');
+//     console.log(result);
+// })();
+
+/* TEST: Exchanger.getCurrency() */
+// (async () => {
+//     const result = await Exchanger.getCurrency();
+//     console.log(result);
+// })();

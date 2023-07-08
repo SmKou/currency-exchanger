@@ -1,14 +1,36 @@
 export default class Exchanger {
     static async getExchange(target, amount = 1) {
         const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/USD/${target}/${amount}`;
-        const response = await fetch(url);
-        console.log(response);
+        const response = await fetch(url)
+            .catch(error => this.getError(error, {
+                status: 418,
+                statusText: 'Failed to fetch'
+            }));
         if (!response.ok)
             return this.getError(target, response);
         else {
             const result = await response.json();
             return this.getData(target, amount, result);
         }
+    }
+
+    static async getCurrency() {
+        const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`;
+        const response = await fetch(url)
+            .catch(error => this.getError(error, {
+                status: 418,
+                statusText: 'Failed to fetch'
+            }));
+        if (!response.ok)
+            return this.getError('getting currency', response);
+        else {
+            const result = await response.json();
+            return this.getRates(result);
+        }
+    }
+
+    static getRates(response) {
+        return Object.keys(response["conversion_rates"]);
     }
 
     static getData(target, amount, response) {
