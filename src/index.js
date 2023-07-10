@@ -24,7 +24,7 @@ setDefault(input.target_selected, 'target');
 })();
 
 const amount = document.querySelector("[type=number]");
-amount.addEventListener('change', () => { input.amount = amount.value })
+amount.addEventListener('change', () => { input.amount = amount.value; });
 
 const base_btn = document.querySelector('.convert_fr .drop_btn');
 base_btn.addEventListener('click', e => {
