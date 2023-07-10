@@ -11,16 +11,21 @@
             <h1>Currency Exchanger</h1>
             <form method="post">
                 <div class="input">
-                    <label for="amount">
+                    <label for="amount" class="button">
                         Amount
                         <input type="number" id="amount" name="amount" min="1" max="4000000000" placeholder="1" pattern="/\d+/">
                     </label>
-                    <div class="custom-select">
-                        <select id="convert-fr"></select>
+                    <div class="dropdown convert_fr">
+                        <button class="drop_btn"><span class="selected"></span></button>
+                        <div class="dropdown_content"></div>
                     </div>
-                    <div class="custom-select">
-                        <select id="convert-into"></select>
+                    <div class="dropdown convert_to">
+                        <button class="drop_btn"><span class="selected"></span></button>
+                        <div class="dropdown_content"></div>
                     </div>
+
+                    <!-- <select id="convert-fr"></select>
+                    <select id="convert-into"></select> -->
                 </div>
                 <input type="submit" value="Calculate">
             </form>
