@@ -26,6 +26,7 @@ Currency Exchanger is a web app that takes an amount, a base currency and a targ
 ### **Under Consideration**
 
 - Cache API results
+- Deploy on Render
 
 ## **Complete Setup**
 
@@ -63,29 +64,6 @@ To run the test suite, use the command ```npm run test``` in the terminal. You c
 To create the production ready code for your project, use the command ```npm run build``` in the terminal.
 
 To build and preview your project, use either ```npm run start``` or ```npm start``` in the terminal.
-
-## **Rendering**
-
-**Github Pages**
-
-```bash
-git add .
-git commit -m "Save final changes"
-git push origin main
-git checkout -b gh-pages
-git push origin gh-pages
-```
-
-**To update Github Pages**
-
-```bash
-git add .
-git commit -m "Save changes in main"
-git push origin main
-git checkout gh-pages
-git merge main
-git push origin gh-pages
-```
 
 ## **Known Bugs**
 
