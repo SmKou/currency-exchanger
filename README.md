@@ -21,12 +21,10 @@ View on [Github Pages](https://smkou.github.io/currency-exchanger/)
 
 ## **Description**
 
-Currency Exchanger is a web app that takes an amount of USD and one of five currencies to convert to. With the submitted data, the app makes an api call to get the most recent exchange rate. If the request receives a response, the result is shown to the user, otherwise an error is displayed, stating the currency does not exist.
+Currency Exchanger is a web app that takes an amount, a base currency and a target currency. The dropdowns are automatically populated with all available options from an api call to get the codes for all supported currencies. Upon clicking submit, with the submitted data, the app makes an api call to get the most recent exchange rate. If the request receives a response, the result is shown to the user, otherwise an error is displayed, stating the currency does not exist. Note that the defaults are 1, USD to EUR.
 
 ### **Under Consideration**
 
-- Load More Currencies: Populate select elem with all available currency types
-- Convert currency to and from other currencies
 - Cache API results
 
 ## **Complete Setup**
@@ -87,21 +85,6 @@ git push origin main
 git checkout gh-pages
 git merge main
 git push origin gh-pages
-```
-
-### **How to render from dist/**
-
-1. Remove dist/ from .gitignore
-
-2.  
-```bash
-git add dist
-git commit -m "Initial dist subtree commit"
-```
-
-3.  
-```bash
-git subtree push --prefix dist origin gh-pages
 ```
 
 ## **Known Bugs**
